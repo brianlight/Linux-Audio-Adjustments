@@ -7,6 +7,10 @@ Debian Based RPi tweaks for improved sound.
  3) Improving the latency of the Operating System with Kernel adjustments
  4) Improve network latency
  ______________________________________________________________________________________________________________________________
+ # Prerequisites 
+ nano file editor; apt install nano
+ Or the ability to use vi editor, your choice.
+ ______________________________________________________________________________________________________________________________
  # Kernel Adjustments and Audio Thread Priority
  1) Create file in /usr/bin called Sound.sh with the text editor nano; nano Sound.sh
  2) Copy and past the contents of Sound.sh into the file, change permissions to 755
