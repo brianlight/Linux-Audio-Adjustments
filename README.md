@@ -17,7 +17,7 @@ Debian Based RPi tweaks for improved sound.
  3) Create a service in /etc/systemd/system called sound.service with nano; nano sound.service
  4) Copy and paste the contents of sound.service intot the file
  5) enable the service; systemctl enable sound.service
- 6) start the service; systemctl start some.service
+ 6) start the service; systemctl start sound.service
  
  # Audio Group Priority
  1) Copy and past the contents of limits.conf into /etc/security/limits.conf, before the last line starting with #End of file.
