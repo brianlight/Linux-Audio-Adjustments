@@ -7,6 +7,7 @@ Debian Based RPi tweaks for improved sound.
  3) Improving the latency of the Operating System with Kernel adjustments
  4) Improve network latency
  ______________________________________________________________________________________________________________________________
+ # Kernel Adjustments and Audio Thread Priority
  1) Create file in /usr/bin called Sound.sh with the text editor nano; nano Sound.sh
  2) Copy and past the contents of Sound.sh into the file, change permissions to 755
  3) Create a service in /etc/systemd/system called sound.service with nano; nano sound.service
@@ -14,3 +15,8 @@ Debian Based RPi tweaks for improved sound.
  5) enable the service; systemctl enable sound.service
  6) start the service; systemctl start some.service
  
+ # Audio Group Priority
+ 1)Copy and past the contents of limits.conf into /etc/security/limits.conf, before the last line starting with #End of file.
+ 
+ # Network Latency
+ 1) Copy and past the contents of sysctl.conf into /etc/sysctl.conf
