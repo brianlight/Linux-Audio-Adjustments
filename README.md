@@ -24,3 +24,8 @@ Debian Based RPi tweaks for improved sound.
  
  # Network Latency
  1) Copy and past the contents of sysctl.conf into /etc/sysctl.conf
+
+
+
+Please take the time to complete this survey on your experience
+https://www.surveymonkey.com/r/GGFZWRH
