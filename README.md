@@ -27,5 +27,5 @@ Debian Based RPi tweaks for improved sound.
 
 
 
-Please take the time to complete this survey on your experience
+Please take the time to complete this survey on your experience, 6 questions 
 https://www.surveymonkey.com/r/GGFZWRH
