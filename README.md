@@ -12,8 +12,8 @@ Debian Based RPi tweaks for improved sound.
  Or the ability to use vi editor, your choice.
  ______________________________________________________________________________________________________________________________
  # Automated Install
- wget https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/basic-install.sh
- sudo bash basic-install.sh
+ 1) wget https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/basic-install.sh
+ 2) sudo bash basic-install.sh
  
  # Automated Removal
  wget 
