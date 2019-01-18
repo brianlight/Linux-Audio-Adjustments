@@ -11,6 +11,13 @@ Debian Based RPi tweaks for improved sound.
  nano file editor; apt install nano
  Or the ability to use vi editor, your choice.
  ______________________________________________________________________________________________________________________________
+ # Automated Install
+ wget https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/basic-install.sh
+ sudo bash basic-install.sh
+ 
+ # Automated Removal
+ wget 
+ ______________________________________________________________________________________________________________________________
  # Kernel Adjustments and Audio Thread Priority
  1) Create file in /usr/bin called Sound.sh with the text editor nano; nano Sound.sh
  2) Copy and past the contents of Sound.sh into the file, change permissions to 755
