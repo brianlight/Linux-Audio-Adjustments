@@ -7,15 +7,24 @@ Debian Based RPi tweaks for improved sound.
  3) Improving the latency of the Operating System with Kernel adjustments
  4) Improve network latency
  ______________________________________________________________________________________________________________________________
- # Prerequisites 
- nano file editor; apt install nano
- Or the ability to use vi editor, your choice.
+ ## Prerequisites 
+ 1) nano file editor; apt install nano
+ 2) Or the ability to use vi editor, your choice.
+ 
+**Should work on any SBC running Debian based OS, has been tested on:**
+
+- Raspberry Pi (v1) model B
+- Raspberry Pi 2 model B
+- Raspberry Pi 3 model B and B+
+- Allo Sparky
+- ASUS Tinkerboard
+- Odroid C2
  ______________________________________________________________________________________________________________________________
- # Automated Install
+ ## Automated Install
  curl -sSL https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/basic-install.sh | bash
  
  
- # Automated Removal
+ ## Automated Removal
  curl -sSL https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/remove.sh | bash
  
  ______________________________________________________________________________________________________________________________
@@ -35,5 +44,5 @@ Debian Based RPi tweaks for improved sound.
 
 
 
-Please take the time to complete this survey on your experience, 6 questions 
+- Please take the time to complete this survey on your experience, 6 questions 
 https://www.surveymonkey.com/r/GGFZWRH
