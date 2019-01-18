@@ -10,11 +10,11 @@ border()
 
 border "Downloading Sound File"
 
-sleep 5
+sleep 4
 wget https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/Sound.sh
 mv Sound.sh /usr/bin/Sound.sh
 chmod 755 /usr/bin/Sound.sh
-sleep 5
+sleep 4
 
 border()
 {
@@ -50,7 +50,7 @@ mv /etc/sysctl.conf /etc/sysctl.conf.bak
 echo "#New Network Latency" > /etc/sysctl.conf
 echo 'net.core.rmem_max = 16777216' >> /etc/sysctl.conf
 echo 'net.core.wmem_max = 16777216' >> /etc/sysctl.conf
-sleep 5
+sleep 4
 
 border()
 {
@@ -65,10 +65,9 @@ border "Creating System Service"
 
 
 sleep 4
-#mv /etc/rc.local /etc/rc.local.bak
 sed -i -e '$i \/usr/bin/Sound.sh\n' /etc/rc.local
 
-sleep 5
+sleep 4
 border()
 {
     title="| $1 |"
