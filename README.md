@@ -20,7 +20,7 @@ Debian Based RPi tweaks for improved sound.
  6) start the service; systemctl start sound.service
  
  # Audio Group Priority
- 1) Copy and past the contents of limits.conf into /etc/security/limits.conf, before the last line starting with #End of file.
+ 1) Copy and past the contents of limits.conf into /etc/security/limits.conf, above the last line that says #End of file.
  
  # Network Latency
  1) Copy and past the contents of sysctl.conf into /etc/sysctl.conf
