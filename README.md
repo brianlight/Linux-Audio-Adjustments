@@ -43,6 +43,7 @@ Debian Based RPi tweaks for improved sound.
  1) Copy and past the contents of sysctl.conf into /etc/sysctl.conf
 
 
+_____________________________________________________________________________________________________________________________
 
-- Please take the time to complete this survey on your experience, 6 questions 
+### Please take the time to complete this survey on your experience, 6 questions 
 https://www.surveymonkey.com/r/GGFZWRH
