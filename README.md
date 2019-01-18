@@ -12,12 +12,12 @@ Debian Based RPi tweaks for improved sound.
  Or the ability to use vi editor, your choice.
  ______________________________________________________________________________________________________________________________
  # Automated Install
- 1) wget https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/basic-install.sh
- 2) sudo bash basic-install.sh
+ curl -sSL https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/basic-install.sh | bash
+ 
  
  # Automated Removal
- 1) wget https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/remove.sh
- 2) sudo bash remove.sh
+ curl -sSL https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/remove.sh | bash
+ 
  ______________________________________________________________________________________________________________________________
  ## Kernel Adjustments and Audio Thread Priority - manual install
  1) Create file in /usr/bin called Sound.sh with the text editor nano; nano Sound.sh
