@@ -16,7 +16,8 @@ Debian Based RPi tweaks for improved sound.
  2) sudo bash basic-install.sh
  
  # Automated Removal
- wget 
+ 1) wget https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/remove.sh
+ 2) sudo bash remove.sh
  ______________________________________________________________________________________________________________________________
  # Kernel Adjustments and Audio Thread Priority
  1) Create file in /usr/bin called Sound.sh with the text editor nano; nano Sound.sh
