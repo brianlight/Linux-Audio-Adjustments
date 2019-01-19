@@ -23,7 +23,6 @@ echo '@audio - nice -20' >> /etc/security/limits.conf
 
 border 'Improving Network Latency'
 
-[[ -f /etc/sysctl.d/network-latency.conf ]] && mv /etc/sysctl.d/network-latency.conf /etc/sysctl.d/network-latency.conf.bak
 echo "#New Network Latency" > /etc/sysctl.d/network-latency.conf
 echo 'net.core.rmem_max = 16777216' >> /etc/sysctl.d/network-latency.conf
 echo 'net.core.wmem_max = 16777216' >> /etc/sysctl.d/network-latency.conf
