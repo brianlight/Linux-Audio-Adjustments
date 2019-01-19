@@ -1,33 +1,20 @@
 #!/bin/bash
+
 border()
 {
-    title="| $1 |"
-    edge=$(echo "$title" | sed 's/./-/g')
-    echo "$edge"
-    echo "$title"
-    echo "$edge"
+    local title="| $1 |"
+    local edge=${title//?/-}
+    echo -e "${edge}\n${title}\n${edge}"
+    sleep 4
 }
 
-border "Removing Linux Audio Tuning"
+border 'Removing Linux Audio Tuning'
 
-rm /usr/bin/Sound.sh
-rm /etc/security/limits.conf
-mv /etc/security/limits.conf.bak /etc/security/limits.conf
-rm /etc/sysctl.conf
-sed -i '/usr/d' /etc/rc.local
+[[ -f /usr/bin/Sound.sh ]] && rm /usr/bin/Sound.sh
+[[ -f /etc/sysctl.d/network-latency.conf ]] && rm /etc/sysctl.d/network-latency.conf
+[[ -f /etc/security/limits.conf.bak ]] && mv /etc/security/limits.conf.bak /etc/security/limits.conf
+[[ -f /etc/rc.local ]] && sed -i '\|/usr/bin/Sound.sh|d' /etc/rc.local
 
-mv /etc/sysctl.conf.bak /etc/sysctl.conf
-
-sleep 4
-border()
-{
-    title="| $1 |"
-    edge=$(echo "$title" | sed 's/./-/g')
-    echo "$edge"
-    echo "$title"
-    echo "$edge"
-}
-
-border "Rebooting System"
+border 'Rebooting System'
 
 reboot
