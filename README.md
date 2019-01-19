@@ -23,13 +23,13 @@ Debian Based RPi tweaks for improved sound.
  ## Automated Install
  curl -sSL https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/basic-install.sh | bash
  
- 1) Optional method:
+ ##### Optional method:
  - wget https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/basic-install.sh
  - sudo ./basic-install.sh
  ## Automated Removal
  curl -sSL https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/remove.sh | bash
  
- 1) Optional method:
+ ##### Optional method:
  - wget https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/remove.sh
  - sudo ./remove.sh
  
