@@ -5,12 +5,13 @@ border()
     local title="| $1 |"
     local edge=${title//?/-}
     echo -e "${edge}\n${title}\n${edge}"
-    sleep 4
+    sleep 1
 }
 
 border 'Downloading Sound File'
 
 wget https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/Sound.sh -O /usr/bin/Sound.sh
+chmod 755 /usr/bin/Sound.sh
 
 border 'Increasing Sound Group Priority'
 
@@ -21,7 +22,6 @@ echo '@audio - memlock 512000' >> /etc/security/limits.conf
 echo '@audio - nice -20' >> /etc/security/limits.conf
 
 border 'Improving Network Latency'
-
 
 echo "#New Network Latency" > /etc/sysctl.d/network-latency.conf
 echo 'net.core.rmem_max = 16777216' >> /etc/sysctl.d/network-latency.conf
