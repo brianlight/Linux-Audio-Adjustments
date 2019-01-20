@@ -25,12 +25,14 @@ Debian Based RPi tweaks for improved sound.
  
  ##### Optional method:
  - wget https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/basic-install.sh
+ - chmod 755 basic-install.sh
  - sudo ./basic-install.sh
  ## Automated Removal
  curl -sSL https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/remove.sh | bash
  
  ##### Optional method:
  - wget https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/remove.sh
+ - chmod 755 remove.sh
  - sudo ./remove.sh
  
  ______________________________________________________________________________________________________________________________
