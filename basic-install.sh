@@ -15,7 +15,6 @@ mv Sound.sh /usr/bin/Sound.sh
 chmod 755 /usr/bin/Sound.sh
 sleep 4
 
-border()
 {
     title="| $1 |"
     edge=$(echo "$title" | sed 's/./-/g')
@@ -31,9 +30,9 @@ echo "#New Limits" > /etc/security/limits.conf
 echo '@audio - rtprio 99' >> /etc/security/limits.conf
 echo '@audio - memlock 512000' >> /etc/security/limits.conf
 echo '@audio - nice -20' >> /etc/security/limits.conf
-sleep 5
+sleep 4
 
-border()
+
 {
     title="| $1 |"
     edge=$(echo "$title" | sed 's/./-/g')
@@ -62,11 +61,9 @@ border()
 
 border "Creating System Service"
 
-
-
 sed -i -e '$i \/usr/bin/Sound.sh\n' /etc/rc.local
 
-
+sleep 4
 border()
 {
     title="| $1 |"
