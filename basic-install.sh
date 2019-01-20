@@ -10,7 +10,6 @@ border()
 
 border "Downloading Sound File"
 
-sleep 4
 wget https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/Sound.sh
 mv Sound.sh /usr/bin/Sound.sh
 chmod 755 /usr/bin/Sound.sh
@@ -26,7 +25,7 @@ border()
 }
 
 border "Increasing Sound Group Priority"
-sleep 4
+
 mv /etc/security/limits.conf /etc/security/limits.conf.bak
 echo "#New Limits" > /etc/security/limits.conf
 echo '@audio - rtprio 99' >> /etc/security/limits.conf
@@ -64,10 +63,10 @@ border()
 border "Creating System Service"
 
 
-sleep 4
+
 sed -i -e '$i \/usr/bin/Sound.sh\n' /etc/rc.local
 
-sleep 4
+
 border()
 {
     title="| $1 |"
