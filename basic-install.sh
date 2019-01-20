@@ -1,77 +1,40 @@
 #!/bin/bash
+
 border()
 {
-    title="| $1 |"
-    edge=$(echo "$title" | sed 's/./-/g')
-    echo "$edge"
-    echo "$title"
-    echo "$edge"
+    local title="| $1 |"
+    local edge=${title//?/-}
+    echo -e "${edge}\n${title}\n${edge}"
+    sleep 4
 }
 
-border "Downloading Sound File"
+border 'Downloading Sound File'
 
-wget https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/Sound.sh
-mv Sound.sh /usr/bin/Sound.sh
-chmod 755 /usr/bin/Sound.sh
-sleep 4
+wget https://github.com/dynobot/Linux-Audio-Adjustments/raw/master/Sound.sh -O /usr/bin/Sound.sh
 
-{
-    title="| $1 |"
-    edge=$(echo "$title" | sed 's/./-/g')
-    echo "$edge"
-    echo "$title"
-    echo "$edge"
-}
+border 'Increasing Sound Group Priority'
 
-border "Increasing Sound Group Priority"
-
-mv /etc/security/limits.conf /etc/security/limits.conf.bak
-echo "#New Limits" > /etc/security/limits.conf
+[[ -f /etc/security/limits.conf ]] && mv /etc/security/limits.conf /etc/security/limits.conf.bak
+echo '#New Limits' > /etc/security/limits.conf
 echo '@audio - rtprio 99' >> /etc/security/limits.conf
 echo '@audio - memlock 512000' >> /etc/security/limits.conf
 echo '@audio - nice -20' >> /etc/security/limits.conf
-sleep 4
+
+border 'Improving Network Latency'
 
 
-{
-    title="| $1 |"
-    edge=$(echo "$title" | sed 's/./-/g')
-    echo "$edge"
-    echo "$title"
-    echo "$edge"
-}
+echo "#New Network Latency" > /etc/sysctl.d/network-latency.conf
+echo 'net.core.rmem_max = 16777216' >> /etc/sysctl.d/network-latency.conf
+echo 'net.core.wmem_max = 16777216' >> /etc/sysctl.d/network-latency.conf
 
-border "Improving Network Latency"
+border 'Creating System Service'
+
+[[ -f /etc/rc.local ]] || echo -e '#/bin/bash\n\nexit 0' > /etc/rc.local
+grep -q '/usr/bin/Sound.sh' /etc/rc.local || sed -i '\|^#!/bin/.*sh|a\/usr/bin/Sound.sh' /etc/rc.local
+chmod +x /etc/rc.local
+systemctl enable rc-local || systemctl enable rc.local
+
+border 'Rebooting System'
 
 
-mv /etc/sysctl.conf /etc/sysctl.conf.bak
-echo "#New Network Latency" > /etc/sysctl.conf
-echo 'net.core.rmem_max = 16777216' >> /etc/sysctl.conf
-echo 'net.core.wmem_max = 16777216' >> /etc/sysctl.conf
-sleep 4
-
-border()
-{
-    title="| $1 |"
-    edge=$(echo "$title" | sed 's/./-/g')
-    echo "$edge"
-    echo "$title"
-    echo "$edge"
-}
-
-border "Creating System Service"
-
-sed -i -e '$i \/usr/bin/Sound.sh\n' /etc/rc.local
-
-sleep 4
-border()
-{
-    title="| $1 |"
-    edge=$(echo "$title" | sed 's/./-/g')
-    echo "$edge"
-    echo "$title"
-    echo "$edge"
-}
-
-border "Rebooting System"
 reboot
