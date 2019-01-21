@@ -32,7 +32,7 @@ border 'Creating System Service'
 [[ -f /etc/rc.local ]] || echo -e '#/bin/bash\n\nexit 0' > /etc/rc.local
 grep -q '/usr/bin/Sound.sh' /etc/rc.local || sed -i '\|^#!/bin/.*sh|a\/usr/bin/Sound.sh' /etc/rc.local
 chmod +x /etc/rc.local
-systemctl enable rc-local || systemctl enable rc.local
+#systemctl enable rc-local || systemctl enable rc.local
 
 border 'Rebooting System'
 
