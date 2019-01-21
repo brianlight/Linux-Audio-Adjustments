@@ -52,4 +52,5 @@ Debian Based RPi tweaks for improved sound.
 
 
 _____________________________________________________________________________________________________________________________
-If so inclined please consider donating    [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=DE4SMVJMSXC64&item_name=Linux+Audio&currency_code=USD&source=url)
+
+
