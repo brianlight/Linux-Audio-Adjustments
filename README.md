@@ -3,7 +3,7 @@ Debian Based RPi tweaks for improved sound. For TinyCore based systems see [Tiny
  
  To improve the sound of the Raspberry Pi using Debian and other distributions of Linux several parameters can be adjusted.
  1) Improving the priority of the Audio group
- 2) Imroving the audio thread priority
+ 2) Improving the audio thread priority
  3) Improving the latency of the Operating System with Kernel adjustments
  4) Improve network latency
  ______________________________________________________________________________________________________________________________
